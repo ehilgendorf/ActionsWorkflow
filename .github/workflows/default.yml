@@ -11,7 +11,9 @@ jobs:
   rollout:
     name: Rollout
     runs-on: ubuntu-latest
-    environment: prod-apply
+    environment: 
+      name: prod-apply
+      url: https://www.google.de
     steps:
       - name: Run a one-line script
         run: echo Hello, world!
