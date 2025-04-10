@@ -1,0 +1,17 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  rollout:
+    name: Rollout
+    runs-on: ubuntu-latest
+    environment: prod-apply
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
